@@ -1,5 +1,13 @@
 # Changelog (MC 1.12)
 
+### 4.0.0
+3.0.5 Config will **not** be compatible with this version.
+- [Commands] Modified /discord to be a CommandTreeBase  
+- [Commands] Moved all subcommands to their respective classes
+- [Config] Added abstract class ConfigurationFile to reduce duplicated code
+- [Config] Added a "secrets" config file to hold sensitive data like the discord bot token
+    
+
 ### 3.0.5
 - [Forge] Updated to build against 1.12.2-14.23.2.2611
 - [Library] Updated JDA
