@@ -63,7 +63,7 @@ public class DynmapIntegration extends DynmapCommonAPIListener implements EventL
     @Override
     @Optional.Method(modid = "dynmap")
     public boolean webChatEvent(String source, String name, String message) {
-        if (Configuration.getConfig().minecraft.integrations.dynmapEnabled) {
+        if (Configuration.getConfig().minecraft.integrations.dynmap.enabled) {
             MinecraftGenericConfig genericConfig = Configuration.getConfig().minecraft.dimensions.generic;
 
             HashMap<String, String> arguments = new HashMap<>();
