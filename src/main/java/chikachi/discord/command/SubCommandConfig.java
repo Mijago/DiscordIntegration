@@ -28,14 +28,14 @@ public class SubCommandConfig {
         switch (subCommand) {
             case "load":
             case "reload":
-                String oldToken = Configuration.getConfig().discord.token;
+                String oldToken = Configuration.getSecrets().discord.token;
 
                 Configuration.loadConfig();
 
                 if (!DiscordClient.getInstance().isConnected()) {
                     // Connect to Discord, if not already connected
                     DiscordClient.getInstance().connect();
-                } else if (!oldToken.equals(Configuration.getConfig().discord.token)) {
+                } else if (!oldToken.equals(Configuration.getSecrets().discord.token)) {
                     // Connect with the new token
                     DiscordClient.getInstance().disconnect();
                     DiscordClient.getInstance().connect();
